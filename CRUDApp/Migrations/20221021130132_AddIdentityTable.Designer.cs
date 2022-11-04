@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CRUDApp.Migrations
 {
-    [DbContext(typeof(AppDbContext))]
+    [DbContext(typeof(Models.CRUDApp))]
     [Migration("20221021130132_AddIdentityTable")]
     partial class AddIdentityTable
     {

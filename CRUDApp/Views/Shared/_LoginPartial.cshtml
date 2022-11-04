@@ -3,11 +3,22 @@
 @inject Microsoft.AspNetCore.Identity.SignInManager<CRUDApp.Models.ApplicationUser> signInManager
 @if(signInManager.IsSignedIn(User))
 {
-    <form method="post" id="logoutForm " asp-action="Logoff" asp-controller="Account">
-        <ul class="nav navbar-nav">
+@*   @if (User.Identity.IsAuthenticated && !true.Equals(ViewData["signed-out"]))
+    {
+        
+    }*@ 
+
+
+     <form method="post" id="logoutForm " asp-action="Logoff" asp-controller="Account">
+       <ul class="nav navbar-nav">
             <li class="text-blue nav-link">Hello, @User.Identity.Name!</li>
-            <li  class="text-white nav-link"><a href="javascript:document.getElementById("logotForm").submit()">Log Off</a></li>
+           
+         <li class="nav-item">
+                 <input type="submit"  value="Logoff" class="btn " />
+            </li>
         </ul>
+
+
     </form>
 }
 else

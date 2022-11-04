@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CRUDApp.Migrations
 {
-    [DbContext(typeof(AppDbContext))]
+    [DbContext(typeof(Models.CRUDApp))]
     [Migration("20221024141703_AddApplicationUser")]
     partial class AddApplicationUser
     {
